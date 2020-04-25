@@ -94,7 +94,7 @@
       -webkit-text-stroke: 1px var(--main-color);
   }
   /* header form */
-  .form-search {
+  /* .form-search {
       display: flex;
       width: 48%;
       height: 40px;
@@ -126,13 +126,13 @@
       background-image: url("../img/search.svg");
       background-repeat: no-repeat;
       background-position: center center;
-  }
+  } */
   /* header user */
   .user {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 250px;
+      max-width: 300px;
   }
   .user span{
       font-size: 1rem;

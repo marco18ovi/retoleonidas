@@ -1,0 +1,236 @@
+/* Variables */
+:root {
+    --main-color: #fe6866;
+    --main-color-degraded: rgba(218, 136, 136, 0.5);
+    --white-color: #ffffff;
+    --border-color: #b2b1b6;
+    --background-color: #efefef47;
+    --shadow: 0 1px 6px 0 #20212447;
+    --shadow-movie: 0 0.1em 0.4em 0 rgba(32, 33, 36, 0.6);
+  }
+  /* Globals */
+  *,
+  *::before,
+  *::after {  
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--background-color);
+  }
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul {
+      margin: 0;
+      padding: 0;
+  }
+  a {  
+      text-decoration: none;
+  }
+  li{
+      list-style: none;
+  }
+  /* burguer buton */
+  .burger-button{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 2rem;
+      left: 150px;
+      background: rgba(255, 141, 110, 1) 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+  .burger-button img{
+      display: none;
+      width: 25px;
+  }
+  .header {
+    grid-area: header;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    height: 4.2rem;
+    background-color: var(--white-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    box-shadow: var(--shadow);
+}
+.logomichi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    max-width: 175px;
+}
+.logo-wrapper {
+    width: 20%;
+}
+.logo-wrapper img{
+ 
+}
+.logomichi span{
+    display: inline-block;
+    font-size: 1.9rem;
+    color: var(--white-color);
+    -webkit-text-stroke: 1.2px rgb(149, 245, 24);
+}
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 250px;
+}
+.user span {
+    font-size: 1rem;
+}
+.user-image {
+    max-width: 48px;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+ .user-image img{
+    display: block;
+    width: 100%
+}
+/* menu option */
+.menu-option {
+    background: linear-gradient( 
+        90deg, 
+        rgba(252, 103, 102, 1) 0%,
+        rgba(255, 141, 118, 1)100%
+        );
+        z-index: 1;
+        height: 100vh;
+        width: calc(100vw * 0.10);
+        position: fixed;
+        padding-top: 4.2rem;
+        transition: .3s;
+
+}
+.nav-option{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr) 2fr 1fr;
+    gap: 1rem;
+    height: calc(100vh - 4.2rem);
+    padding: 1rem;
+}
+.option-item{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    color: var(--white-color);
+    font-size: 1rem;
+}
+.option-wrapper{
+    width: 50px;
+}
+.option-wrapper img{
+    width: 100%;
+}
+.option-item span{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* main */
+.main {
+    display: grid;
+    grid-area: list-sharu;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin-top: 0;
+}
+/* main-section movie */
+.title-section {
+    margin: .6rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.list-sharu {
+    display: grid;
+    grid-template-columns: .7fr;
+    grid-template-rows: minmax(250px, 500px);
+    justify-content: center;
+}
+
+/* .main movie item */
+.sharu-item {
+    display: block;
+    position: relative;
+    color: var(--white-color);
+    box-shadow: var(--shadow-movie) ;
+}
+.sharu-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.sharu-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sharu-details {
+    background: rgba(0, 0, 0, .7);
+    /* display: absolute; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    /* align-items: center; */
+    /* justify-items: center; */
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* background: var(--main-color-degraded);
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    text-align: center;
+    padding-top: .5em 1em;
+    transition: .3s; */
+}
+/* .sharu:hover .sharu-details {
+    display: flex;
+} */
+.sharu-item:hover .sharu-details{
+ display: block;
+}
+.sharu-details h4{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 30px;
+    text-align: center;
+}
+.sharu-details p {
+    text-align: justify;
+    margin-top: 150px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
