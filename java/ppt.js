@@ -19,7 +19,7 @@ opcionusuario = prompt("Sharu te reta a Jugar \nPiedra: 0\nPapel: 1\nTijera:2",0
 // alert( "elegiste " + opcionusuario);
 
 alert("Elegiste " + opciones[opcionusuario]);
-alert("javascript eligio " + opciones[opcionmaquina]);
+alert("Sharu eligio " + opciones[opcionmaquina]);
 
 if(opcionusuario == piedra ) {
     // alert("elegiste piedra");
