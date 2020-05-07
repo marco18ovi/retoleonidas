@@ -14,7 +14,7 @@ var opciones = ["piedra", "papel", "tijera"];
 var opcionusuario;
 var opcionmaquina = aleatorio(0,2);
 
-opcionusuario = prompt("¿que eliges?\nPiedra: 0\nPapel: 1\nTijera:2",0);
+opcionusuario = prompt("Sharu te reta a Jugar \nPiedra: 0\nPapel: 1\nTijera:2",0);
 
 // alert( "elegiste " + opcionusuario);
 
